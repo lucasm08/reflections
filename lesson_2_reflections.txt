@@ -1,0 +1,71 @@
+What happens when you initialize a repository? Why do you need to do it?
+
+When I initialized my directory git showed me a message as a comfirmation
+the initialization then create automatically a hidden directory named ".git" in my
+directory. As the intructor said this directory contains the configs of my actual 
+directory as the history of the commits and other features.
+
+How is the staging area different from the working directory and the repository? 
+What value do you think it offers?
+
+the staging area  is different from the wording directory and the repository in the sense that
+it act as intermediary between them. In fact, when you want to make a commit from your 
+working directory it goes before to the staging  area then make a commit to the repository.
+it allows to make mutiple commit of files ( logically related ) and ckeck wether we want to remove
+a commit or add more commits.
+
+How can you use the staging area to make sure you have one commit per logical change?
+
+I can use the staging area to add files that concern only one logical change. In other words
+if run the command git status and see some files in the staging area, that means those files
+concern only one logical change. So if want to add some files that concern another logical change
+I will commit the previous one so that the staging area will contain one logical change.
+
+What are some situations when branches would be helpful in keeping your history organized? 
+How would branches help?
+
+For example if you want to add new features to your project but your are not sure
+sure that you will keep them. You can create a new branch for those features and start 
+working on them while still continue working on the original project. Thus, you can
+make commits for either one branch or all the branches. Then after if you think it's 
+worth adding these feartures  you can merge the branches.
+
+How do the diagrams help you visualize the branch structure?
+
+Before seeing the graph the concept of branch was very abstract to me.
+the diagram allowed to reprsents in a meaningful way the idea that 
+branches were labels for commits. it helps me see wich branch contains 
+a given commit and how this commit is related to the other ones. it helps
+me also grasp the idea of reachability 
+
+What is the result of merging two branches together? 
+Why do we represent it in the diagram the way we do?
+
+the result is a merge commit which the tip of the branch ckecked out 
+while doing the merge. Roughly, we get an udapted branch in which 
+we merge the other branch into, with the commits of that branch and the ones 
+of the other branch sorted by time.
+
+it's because it's a combinaition of tow branches and 
+the merge commit has as parents the most recent commits 
+of the branch being merged.
+
+What are the pros and cons of Git’s automatic merging vs. always doing merges manually?
+
+The pros of git's automatic merging are it prevents you of doing a lot of work 
+and warns you in case of conflicts between files by highlighting these conflicts. 
+This make the modications very easy. But git will always warn you
+whenever there a conflict even if it's irrelevant. In fact, maybe one of the files
+concern by this conflict may resolve it. So there's no need to go through the files and
+resolve the conflicts.
+
+doing merges manually gives you entire control of your file and solves the problem
+mentoined above for Git's automatic merging. But it's a lot work especially if the merge
+concern a lot of files. you will have to go through the entire files, make some changes, maybe
+you could introduce some bugs inadvertently. 
+
+
+
+
+
+
